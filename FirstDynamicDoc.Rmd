@@ -1,5 +1,5 @@
 ---
-title: "Workshop - January 2018: Birthday Problem Testing"
+title: "Workshop - January 2018: Birthday Problem Test"
 author: "cmachingauta"
 date: "January 10, 2018"
 output: html_document
