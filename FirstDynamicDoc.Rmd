@@ -1,5 +1,5 @@
 ---
-title: "Workshop - January 2018: Birthday Problem"
+title: "Workshop - January 2018: Birthday Problem Test"
 author: "cmachingauta"
 date: "January 10, 2018"
 output: html_document
@@ -7,7 +7,7 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
- # fixing seed 
+ # fixing seed
 n.pers =27
 set.seed(1234)
 ```
@@ -15,7 +15,7 @@ set.seed(1234)
 # The Problem
 What is the probability that at least two people this room share the same birthday?
 
-Is it something like $\frac {`r n.pers`} {365} =$ 
+Is it something like $\frac {`r n.pers`} {365} =$
 `r round(n.pers/365, 2)`
 
 # Analytical solution
@@ -47,7 +47,7 @@ p(n= `r n.pers`) &= `r round(1 - factorial(n.pers)*choose(365,n.pers)/ 365^n.per
 birthday.prob = function(n.pers, n.sims) {  
 # simulate birthdays  
 birthdays = matrix(round(runif(n.pers * n.sims,1
-                               , 365)),nrow = n.sims, 
+                               , 365)),nrow = n.sims,
                    ncol = n.pers)
 # for each room (row) get unique birthdays
 unique.birthdays = apply(birthdays, 1, unique)  
@@ -63,4 +63,3 @@ res1 = birthday.prob(n.pers.param,n.sims.param)
 ```
 
 The simulated probability is `r round(res1, 2)`
-
